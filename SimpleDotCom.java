@@ -1,5 +1,6 @@
 public class SimpleDotCom {
 
+  //instance variables
   int[] locationCells;
   int numOfHits = 0;
 
@@ -8,6 +9,8 @@ public class SimpleDotCom {
     locationCells = locs;
   }
 
+  //check yourself method- checks guess
+  //default result is miss, if hit result is hit
   public String checkYourself(String stringGuess) {
     int guess = Integer.parseInt(stringGuess);
     String result = "miss";
@@ -18,7 +21,8 @@ public class SimpleDotCom {
         break;
       }
     }
-
+    
+    //kill method. if # of hits = length of dotcom, result is kill
     if (numOfHits == locationCells.length){
       result = "kill";
     }
